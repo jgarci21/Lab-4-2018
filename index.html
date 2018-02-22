@@ -1,70 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
-    <meta charset="UTF-8">
-        <title> ITMD 361 Lab 4 /title>
+ <head>
+   <meta charset="utf-8"/>
+   <title>ITMD 361: Fundamentals of web developement</title>  
+ </head>
+ 
+ <body>
+  <h1>Volunteer Form</h1>
+  <form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="post">
+    <fieldset>
+	  <h3>My Info</h3>
+	  
+	   <div>
+                <label>First Name:
+                    <input type="text" name="first_name_field">
+                </label>
+            </div>
+            <div>
+                <label>Last Name:
+                    <input type="text" name="last_name_field">
+                </label>
+            </div>
+            <div>
+                <label>Phone Number:
+                    <input type="tel" name="phone_field">
+                </label>
+            </div>
+            <div>
+                <label>Email Address:
+                    <input type="email" name="email_field">
+                </label>
+            </div>
+
+            <div>
+              <label>Gender:
+              <input type="radio" name="gender_field" value="Male"> Male
+              </label>
+              <label>
+              <input type="radio" name="gender_field" value="Female"> Female
+              </label>
+            </div>
+
+            <div>
+                <label>Age:
+                    <select name="age_field">
+                        <option value="under 18">under 18</option>
+                        <option value="18-24">18-24</option>
+                        <option value="25-34">25-34</option>
+                        <option value="35-44">35-44</option>
+                        <option value="45-54">45-54</option>
+                        <option value="55-64">55-64</option>
+                        <option value="65 and over">65 and over</option>
+                    </select>
+                </label>
+            </div>	  
+	</fieldset>
+	
+	<h3>My Availability</h3>
+	<fieldset>
+		
+	  <label >Days Available: </label>
+            <div>
+                <input type="checkbox" id="sun" name="available_field[]"  value="Sunday"/>
+				<label for="sun">Sunday</label>
+             </div>
+            <div>
+                <input type="checkbox" id="mon" name="available_field[]"  value="Monday"/>
+                <label for="mon">Monday</label>
+            </div>
+            <div>
+			
+                <input type="checkbox" id="tue" name="available_field[]" value="Tuesday"/>
+                <label for="tue">Tuesday</label>
+            </div>
+            <div>
+                <input type="checkbox" id="wed" name="available_field[]" value="Wednesday"/>
+                <label for="wed">Wednesday</label>
+            </div>
+            <div>
+                <input type="checkbox" id="thur" name="available_field[]" value="Thursday"/>
+                <label for="thur">Thursday</label>
+            </div>
+            <div>
+                <input type="checkbox" id="fri" name="available_field[]" value="Friday"/>
+                <label for="fri">Friday</label> 
+            </div>
+            <div>
+                <input type="checkbox" id="sat" name="available_field[]" value="Saturday"/>
+                <label for="sat">Saturday</label>
+            </div>
+	        <div>
+			<label >Any Comments?</label>
+			</div>
+	        <div>
+            <textarea name="comments_field" rows="10" cols="20"></textarea>
+			</div>
+	</fieldset>
+       <input type="submit" value="Send Me">
         
-</head>    
-<body>
-
-    <h1>Volunteer Form</h1>
-    <form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="POST">
-      <fieldset>
-      
-        <legend><strong>My Info</strong></legend>
-          <div>
-            <label>First Name: <input type="text" name="First_name_Field"></label>
-          </div>
-          <p>
-            <label>Last Name: <input type="text" name="Last_name_Field"></label>
-          </p>
-          <p>
-            <label>Phone Number: <input type="text" name="Phone_Field"></label>
-          </p>
-          <p>
-            <label> Email Address: <input type="text" name="Email_Field"></label>
-          </p>
-          <p>
-          
-            <label>Gender:</label>
-            <label>Male<input type="radio" checked="checked" name="Gender_Field" value="male"></label>
-            <label>Female<input type="radio" name="Gender_Field" value="female"></label>
-          </p>
-          
-          <p>
-            <label>Age:</label>
-            <select name="Age_Field">
-              <option value="under 18">under 18</option>
-              <option value="18-24">18-24</option>
-              <option value="25-34">25-34</option>
-              <option value="35-44">35-44</option>
-              <option value="45-54">45-54</option>
-              <option value="55-64">55-64</option>
-              <option value="65 and over">65 and over</option>
-            </select>
-          </p>
-          
-      </fieldset>
-      <fieldset>
-        <legend><strong>My Availability</strong></legend>
-          <label> Days Available:</label>
-          
-          <div>
-            <p>Sunday<input type="checkbox" checked="checked" name="available_field[]" value="Sunday"></p>
-            <p>Monday<input type="checkbox" name="available_field[]" value="Monday"></p>
-            <p>Tuesday<input type="checkbox" name="available_field[]" value="Tuesday"></p>
-            <p>Wednesday<input type="checkbox" name="available_field[]" value="Wednesday"></p>
-            <p>Thursday<input type="checkbox" name="available_field[]" value="Thursday<"></p>
-            <p>Friday<input type="checkbox" name="available_field[]" value="Friday"></p>
-            <p>Saturday<input type="checkbox" name="available_field[]" value="Saturday"></p>
-          </div> 
-          
-  <p><label>Any Comments?:</label></p>
-            <textarea cols="50" rows="10" name="comments_field"></textarea>
-      </fieldset>    
-      <input type="Hidden" name="Hidden_Field" value="jgarci21"><br />
-      <input type="Submit" value="Submit">
-    </form>    
-</body>    
+       <input type="hidden" name="hidden_field" value="vdogo">
+  </form>
+  
+ </body>
 </html>
